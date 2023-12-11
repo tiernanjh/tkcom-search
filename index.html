@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TXMaxx.com item search</title>
+    <script>
+        function redirectToTKMaxx() {
+            var searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm.trim() !== '') {
+                var url = 'https://www.tkmaxx.com/uk/en/p/' + encodeURIComponent(searchTerm);
+                window.location.href = url;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>TXMaxx.com item search</h1>
+    <form onsubmit="event.preventDefault(); redirectToTKMaxx();">
+        <label for="searchInput">Search SKU or dept & style:</label>
+        <input type="text" id="searchInput" placeholder="00000000" required>
+        <button type="submit">Search</button>
+    </form>
+<p>Enter SKU code from sticker or department and style codes as one word from ticket to be brought to the item page to see price. If the item has been sold out, price will not be shown.</p>
+</body>
+</html>
